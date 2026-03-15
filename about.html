@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · NexGen AI Docs</title>
+  <style>
+    :root {
+      --bg: #090b14;
+      --panel: rgba(17, 22, 38, 0.88);
+      --panel-strong: #141a2b;
+      --border: rgba(148, 163, 184, 0.16);
+      --text: #e5ecff;
+      --muted: #93a4c7;
+      --accent: #7c3aed;
+      --accent-2: #06b6d4;
+      --accent-3: #f472b6;
+      --shadow: 0 24px 60px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.24), transparent 30%),
+        radial-gradient(circle at top right, rgba(6, 182, 212, 0.16), transparent 28%),
+        linear-gradient(180deg, #06070d 0%, #0d1220 54%, #090b14 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(9, 11, 20, 0.74);
+      border-bottom: 1px solid rgba(148,163,184,.08);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 0;
+    }
+    .brand { display: flex; align-items: center; gap: .8rem; font-weight: 700; }
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; box-shadow: 0 10px 30px rgba(124, 58, 237, .35);
+    }
+    .nav-links { display: flex; gap: 1.2rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    main { padding: 5.5rem 0 4rem; }
+    .hero {
+      background: linear-gradient(180deg, rgba(20,26,43,.88), rgba(12,17,31,.94));
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: clamp(2rem, 5vw, 4rem);
+      box-shadow: var(--shadow);
+      display: grid; gap: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .eyebrow {
+      display: inline-flex; width: fit-content; align-items: center; gap: .5rem;
+      padding: .45rem .8rem; border-radius: 999px; font-size: .88rem;
+      background: rgba(6,182,212,.11); color: #67e8f9; border: 1px solid rgba(6,182,212,.18);
+    }
+    h1, h2, h3 { margin: 0; }
+    h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
+    p { margin: 0; color: var(--muted); line-height: 1.8; }
+    .story {
+      display: grid; gap: 1.2rem;
+      grid-template-columns: 1.1fr .9fr;
+      margin-bottom: 2.5rem;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: grid; gap: .9rem;
+    }
+    .timeline { display: grid; gap: 1rem; }
+    .timeline-step {
+      padding: 1rem 1.05rem; border-radius: 18px;
+      background: rgba(255,255,255,.02); border: 1px solid rgba(148,163,184,.1);
+    }
+    .team-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .member {
+      background: linear-gradient(180deg, rgba(17,22,38,.88), rgba(10,13,24,.95));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: grid; gap: .75rem;
+    }
+    .avatar {
+      width: 58px; height: 58px; border-radius: 18px;
+      display: grid; place-items: center; font-size: 1.35rem;
+      background: linear-gradient(135deg, rgba(124,58,237,.28), rgba(244,114,182,.18));
+      border: 1px solid rgba(124,58,237,.18);
+    }
+    .role { color: #c4b5fd; font-size: .95rem; }
+    footer {
+      border-top: 1px solid rgba(148,163,184,.08);
+      color: var(--muted);
+      padding: 2rem 0 3rem;
+    }
+    @media (max-width: 820px) {
+      .nav-inner { flex-direction: column; gap: .9rem; }
+      .story { grid-template-columns: 1fr; }
+      main { padding-top: 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">N</span>
+        <span>NexGen AI Docs</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <span class="eyebrow">About NexGen AI</span>
+        <h1>Built by operators, engineers, and product people who were tired of duct-taped automation.</h1>
+        <p>
+          NexGen AI exists to make intelligent workflow automation usable in the real world: secure enough for enterprise,
+          flexible enough for builders, and clear enough for the people who have to own it after launch.
+        </p>
+      </section>
+
+      <section class="story">
+        <article class="panel">
+          <h2>Our story</h2>
+          <p>
+            The company started with a frustrating pattern: every team wanted AI-driven automation, but the implementation
+            was scattered across scripts, undocumented integrations, and approval flows no one trusted. NexGen AI was
+            created to replace that patchwork with a coherent platform for orchestration, visibility, and human control.
+          </p>
+          <p>
+            Today, we help enterprises move from one-off AI experiments to reliable production workflows. The documentation
+            site mirrors that mission: practical guidance, strong defaults, and examples that respect how modern teams
+            actually work.
+          </p>
+        </article>
+        <aside class="panel">
+          <h2>What we believe</h2>
+          <div class="timeline">
+            <div class="timeline-step"><strong>Clarity beats complexity.</strong><br><span>Every workflow should be inspectable, reviewable, and understandable.</span></div>
+            <div class="timeline-step"><strong>Humans stay in the loop.</strong><br><span>Approvals, policy gates, and audit trails are product features, not afterthoughts.</span></div>
+            <div class="timeline-step"><strong>Speed matters.</strong><br><span>Teams should be able to prototype quickly without turning production into a guessing game.</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section>
+        <div class="panel" style="margin-bottom: 1.2rem;">
+          <h2>Leadership team</h2>
+          <p>Cross-functional by design, because enterprise automation is never just an engineering problem.</p>
+        </div>
+        <div class="team-grid">
+          <article class="member">
+            <div class="avatar">⚙️</div>
+            <h3>Maya Chen</h3>
+            <div class="role">Chief Executive Officer</div>
+            <p>Sets product direction and keeps the company anchored on customer outcomes instead of AI theater.</p>
+          </article>
+          <article class="member">
+            <div class="avatar">🧠</div>
+            <h3>Adrian Cole</h3>
+            <div class="role">Chief Technology Officer</div>
+            <p>Owns platform architecture, model strategy, and the policies that keep intelligent systems dependable.</p>
+          </article>
+          <article class="member">
+            <div class="avatar">📊</div>
+            <h3>Sofia Ramirez</h3>
+            <div class="role">VP of Operations</div>
+            <p>Bridges automation strategy with daily execution so teams can trust what runs in production.</p>
+          </article>
+          <article class="member">
+            <div class="avatar">🎨</div>
+            <h3>Luca Bennett</h3>
+            <div class="role">Head of Design</div>
+            <p>Shapes the product and documentation experience so power and simplicity can coexist.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">NexGen AI · Building better systems for enterprise workflow automation.</div>
+  </footer>
+</body>
+</html>
